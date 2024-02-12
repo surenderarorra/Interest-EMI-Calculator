@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="popup" id="popup">
+        <h2>Select a Service:</h2>
+        <div>
+            <select name="service" id="service" class="service">
+                <option value="int">Simple Interest</option>
+                <option value="emi">EMI</option>
+            </select>
+        </div>
+        <button class="calc-btn" onclick="toggleFun()">Select</button>
+    </div>
+
+    <section id="int" class="main-container hide">
+        <div class="heading">
+            <h1>Simple Interest Calculator, I=PRT</h1>
+        </div>
+        <div id="output-div" class="output-div">
+            <h2 id="output" class="output">Simple Interest (I)</h2>
+        </div>
+        <div class="calc">
+            <input type="text" id="principle" required class="principle" placeholder="Principle Amount (P)">
+            <input type="text" id="rate" required class="rate" placeholder="Rate in %">
+            <input type="text" id="year" class="year" placeholder="Year(s)">
+            <input type="text" id="month" class="month" placeholder="Month(s)">
+            <input type="text" id="day" class="day" placeholder="Day(s)">
+        </div>
+        <div class="btn">
+            <button id="calc-btn" class="calc-btn" onclick="calculate()">Calculate</button>
+            <button class="calc-btn" onclick="clearInput()">Clear</button>
+        </div>
+
+    </section>
+
+    <section id="emi" class="emi hide">
+        <div class="heading">
+            <h1>Convert to EMI</h1>
+        </div>
+        <div id="output-div" class="output-div">
+            <h2 id="output-emi" class="output-emi">Calculate Per Month EMI</h2>
+        </div>
+        <div class="calc calc-emi">
+            <input type="text" id="amt" class="principle" placeholder="Amount:">
+            <input type="text" id="rateemi" class="rate" placeholder="Rate in %">
+            <select name="emi-m" id="emi-m" class="emi-m">
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="9">9 Months</option>
+                <option value="12">12 Months</option>
+                <option value="15">15 Months</option>
+                <option value="18">18 Months</option>
+                <option value="21">21 Months</option>
+                <option value="24">24 Months</option>
+            </select>
+        </div>
+        <div class="btn">
+            <button id="calc-btn" class="calc-btn" onclick="calculateEMI()">Calculate</button>
+            <button class="calc-btn" onclick="clearInput()">Clear</button>
+        </div>
+    </section>
+
+    <section class="emis hide">
+        <!-- <div class="headings">
+            <div class="amt-div">
+                <h2>Actual Amount</h2>
+                <span>&#8377 50000</span>
+            </div>
+            <div class="amt-div">
+                <h2>Simple Interest</h2>
+                <span>&#8377 50000</span> 
+            </div>
+            <div class="amt-div">
+                <h2>Total Amount To be Paid</h2>
+                <span>&#8377 50000</span>
+            </div>
+        </div>
+
+        <div class="total-emi">
+            <div class="emi-heading">
+
+                <div class="final-pay">
+                    <h2>3 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>6 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>9 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>12 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>15 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>18 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>21 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+
+                <div class="final-pay">
+                    <h2>24 Months</h2>
+                    <span>&#8377 50000 P/M</span>
+                </div>
+            </div>
+        </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
